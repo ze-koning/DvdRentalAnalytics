@@ -1,0 +1,50 @@
+version: 2
+sources:
+  - name: dvd_rental
+    database: dvdrental
+    schema: public
+    tables:
+      - name: customer
+        description: This table has basic information about a customer, as well as some derived facts based on a customer's orders
+        columns:
+        - name: customer_id
+          description: This is a unique identifier for a customer
+          tests:
+            - unique
+            - not_null
+            
+      - name: rental
+        description: Information about dvd rentals
+        columns:
+        - name: rental_id
+          description: This is a unique identifier for a rental
+          tests:
+          - unique
+          - not_null
+
+      - name: address
+        description: Information about dvd rentals
+        columns:
+        - name: address_id
+          description: This is a unique identifier for a address
+          tests:
+          - unique
+          - not_null
+
+      - name: city
+        description: Information about dvd rentals
+        columns:
+        - name: city_id
+          description: This is a unique identifier for a city
+          tests:
+          - unique
+          - not_null
+
+      - name: country
+        description: Information about dvd rentals
+        columns:
+        - name: country_id
+          description: This is a unique identifier for a country
+          tests:
+          - unique
+          - not_null
